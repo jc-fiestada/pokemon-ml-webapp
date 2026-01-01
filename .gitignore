@@ -1,0 +1,14 @@
+# secrets
+.env
+
+# python
+venv/
+__pycache__/
+
+# ts
+node_modules/
+dist/
+
+# dotnet
+obj/
+bin/
