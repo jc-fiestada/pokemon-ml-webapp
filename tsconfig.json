@@ -1,0 +1,20 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    "rootDir": "./wwwroot/src",
+    "outDir": "./wwwroot/dist",
+
+    "module": "es2020",
+    "target": "es2020",
+    "lib": ["DOM", "ES2020"],
+
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+
+    "strict": true,
+    "skipLibCheck": true,
+  },
+  "include": ["./wwwroot/src/**/*"],
+  "exclude": ["./wwwroot/dist/**/*", "./node_modules"]
+}

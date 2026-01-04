@@ -12,3 +12,6 @@ dist/
 # dotnet
 obj/
 bin/
+
+#json files
+Data/
