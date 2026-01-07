@@ -8,6 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from pathlib import Path
 import joblib as jb
 
+
 app_root = Path(__file__).resolve().parent.parent.parent
 python_root = Path(__file__).resolve().parent.parent
 
@@ -43,8 +44,6 @@ def TrainAndSaveModels():
         ])
     }
 
-    print(data)
-
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
 
     Pipelines["Tree"].fit(X_train, y_train)
@@ -55,9 +54,12 @@ def TrainAndSaveModels():
     jb.dump(Pipelines["Log"], Path.joinpath(model_dirpath, "Log.pkl"))
     jb.dump(Pipelines["KNN"], Path.joinpath(model_dirpath, "KNN.pkl"))
 
+    test_data : pd.DataFrame = X_test.copy()
+    test_data["PrimaryType"] = y_test.copy()
+    test_data.to_csv(Path.joinpath(model_dirpath, "TestData.csv"), index=False)
+
     return 1
 
 TrainAndSaveModels()
-print(csv_filepath)
 
 
