@@ -4,6 +4,7 @@
 # python
 venv/
 __pycache__/
+PythonServices/TrainedModels
 
 # ts
 node_modules/

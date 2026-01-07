@@ -3,3 +3,4 @@ scikit-learn
 notebook
 uvicorn
 fastapi
+joblib
