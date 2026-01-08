@@ -44,6 +44,7 @@ def ModelMetricsMeasurement():
     treePrediction = result["TreePrediction"]
 
     knnMetricsEval = {
+        "modelName" : "KNN",
         "confusionMetrics" : confusion_matrix(trueValue, knnPrediction),
         "accuracyScore" : accuracy_score(trueValue, knnPrediction),
         "precisionScore" : precision_score(trueValue, knnPrediction, average="weighted", zero_division=0),
@@ -52,6 +53,7 @@ def ModelMetricsMeasurement():
     }
 
     logMetricsEval = {
+        "modelName" : "Logistic Regression",
         "confusionMetrics" : confusion_matrix(trueValue, logPrediction),
         "accuracyScore" : accuracy_score(trueValue, logPrediction),
         "precisionScore" : precision_score(trueValue, logPrediction, average="weighted", zero_division=0),
@@ -60,6 +62,7 @@ def ModelMetricsMeasurement():
     }
 
     treeMetricsEval = {
+        "modelName" : "Tree",
         "confusionMetrics" : confusion_matrix(trueValue, treePrediction),
         "accuracyScore" : accuracy_score(trueValue, treePrediction),
         "precisionScore" : precision_score(trueValue, treePrediction, average="weighted", zero_division=0),
