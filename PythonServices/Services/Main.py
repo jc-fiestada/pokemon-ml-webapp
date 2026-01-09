@@ -3,6 +3,7 @@ import joblib as jb
 from pathlib import Path
 
 from Models.Response import Response
+from Services.Test import ModelMetricsMeasurement
 
 
 
@@ -15,7 +16,7 @@ def CheckConnection():
 
 @app.get("/predict/pokemon-type")
 def PredictPokemenType():
-    return
+    return ModelMetricsMeasurement()
     
 
 
